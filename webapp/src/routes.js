@@ -1,21 +1,16 @@
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { css } from '@emotion/react'
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Home } from './home'
+import { layoutStyle, contentStyle } from './styles'
+import NavBar from './components/nav/NavBar'
+
+const pages = [['/', 'Home'], ['/another', 'Another Page']]
 
 function AppRouter () {
   return (
     <Router>
       <div css={layoutStyle}>
-        <nav css={navStyle}>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/another'>Another route</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar pages={pages} />
         <div className='main-content' css={contentStyle}>
           <Route component={Home} exact path='/' />
           <Route component={() => (<div>Content for /another route</div>)} exact path='/another' />
@@ -26,27 +21,3 @@ function AppRouter () {
 }
 
 export default AppRouter
-
-const layoutStyle = css`
-    display: grid;
-    grid-row-gap: 24px;
-    padding: 8px;
-`
-
-const navStyle = css`
-  grid-row: 1;
-
-  & > ul {
-      display: flex;
-      flex-direction: row;
-      list-style-type: none;
-  }
-  
-  & > ul > li:not(:first-of-type) {
-    margin-left: 16px;
-  }
-`
-
-const contentStyle = css`
-  grid-row: 2;
-`
