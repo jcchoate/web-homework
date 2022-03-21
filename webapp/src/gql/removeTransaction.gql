@@ -1,5 +1,0 @@
-mutation RemoveTransaction( $id: String! ) {
-    removeTransaction(id: $id) {
-        id
-    }
-}

@@ -1,26 +1,13 @@
-# Summary of what I did
-This project uses GraphQL and MongoDB for to create a persistant backend and utilizes React with Emotion and MaterialUi on the front end.
-
-I created reusable components to create a navbar, a transaction table, a break down of amount spent using a pie chart, and the ability to add, edit, and remove transactions on and off the table.
-
-While working on this project I learned to use EmotionJS and used it from one central file to distribut styles accross all components. I also used Grid Template Areas for the first time and that was fun! I had never used MongoDB as well so that certainly was a wild ride getting the database to work the first time. I have never used Recharts before which is what I used on the pie chart and I have to say it was extremely simple and fast to pick up and add in.
-
-The challenges also brought learning opportunities with Unit tests which really ramped in complexity when mocking Apollo calls. Also getting the repo to run provided many challenges.
-
-All in all, I had a good time creating this and hope the love and effort shows. 
-
-
-
 # Divvy Homework Assignment
 
 This repository provides a starting point for a basic React + GraphQL application.
 All of the configuration boilerplate is complete so you can start by writing the code that you want us to see.
 
-Please **fork** this repo a **private repo** on your GitHub account.
+Somebody from Divvy will create a private repo cloned from this template and send you an invitation to contribute. 
 
-Please share your finished project repo with @thawk55 and @jakerichan as part of your submission.
+Please do all your work in a feature branch. When you're finished, create a PR back into the `master` branch. This PR is a great opportunity to describe the objectives you completed and any notes you'd like us to know when reviewing your submission.
 
-<br />
+> If you don't want this to show publicly, double check your profile settings. You'll want to disable "Include private contributions on my profile" under "Contributions". Otherwise your activity will still be publicly visible.
 
 
 ## Project Setup
