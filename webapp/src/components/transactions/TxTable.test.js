@@ -1,19 +1,35 @@
-import { render } from '@testing-library/react'
-import TxTable from './TxTable'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import { MockedProvider } from '@apollo/client/testing'
+import { TxTable } from './TxTable'
+import { transactions } from '../../../mocks/transactions-data'
 
-describe('Transactions Table', () => {
-  it('Example: should show user "employee4" with amount "150"', () => {
-    const { getByTestId } = render(
-      <TxTable
-        data={[{
-          id: 'txn:1',
-          user_id: 'employee4',
-          merchant_id: 'mer:1',
-          amount: 150
-        }]}
-      />
+describe('TxTable', () => {
+  const props = {
+    data: transactions
+  }
+
+  it('should render the Transactions table ', () => {
+    render(
+      <MockedProvider mocks={[]}>
+        <TxTable {...props} />
+      </MockedProvider>
     )
-    expect(getByTestId('transaction-txn:1')).toBeVisible()
-    expect(getByTestId('transaction-txn:1-amount')).toHaveTextContent('150')
+    expect(screen.getByTestId('txTable')).toBeInTheDocument()
   })
+
+  // it('should call deleteTransactionFromState when the delete button is clicked', () => {
+  //   const deleteTransactionFromState = jest.fn()
+  //   props.deleteTransactionFromState = deleteTransactionFromState
+
+  //   render(
+  //     <MockedProvider mocks={mocks}>
+  //       <TxTable {...props} />
+  //     </MockedProvider>
+  //   )
+  //   const test = screen.queryAllByRole('button')[1]
+  //   fireEvent.click(test)
+
+  //   expect(deleteTransactionFromState).toHaveBeenCalled()
+  // })
 })
