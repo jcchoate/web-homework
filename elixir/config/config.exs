@@ -10,13 +10,6 @@ use Mix.Config
 config :homework,
   ecto_repos: [Homework.Repo]
 
-config :plaid,
-  root_uri: "https://development.plaid.com/",
-  client_id: 623b6db2b5b1140012aedc86,
-  secret: 2499f919d0b485a7db2e64b098aad9,
-  public_key: "your_public_key",
-  httpoison_options: [timeout: 10_000, recv_timeout: 30_000]
-
 # Configures the endpoint
 config :homework, HomeworkWeb.Endpoint,
   url: [host: "localhost"],
