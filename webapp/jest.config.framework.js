@@ -1,2 +1,2 @@
-require('jest-chain')
-require('@testing-library/jest-dom')
+require('jest-chain');
+require('jest-dom/extend-expect');

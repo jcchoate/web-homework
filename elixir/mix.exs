@@ -14,6 +14,7 @@ defmodule Homework.MixProject do
     ]
   end
 
+
   # Configuration for the OTP application.
   #
   # Type `mix help compile.app` for more information.
@@ -49,6 +50,13 @@ defmodule Homework.MixProject do
     ]
   end
 
+  # Dependency for Plaid integration
+  def deps do
+  [
+    {:elixir_plaid, "~> 1.0.0"}
+    {:httpoison, "~> 1.7"}
+  ]
+  end
   # Aliases are shortcuts or tasks specific to the current project.
   # For example, to install project dependencies and perform other setup tasks, run:
   #
