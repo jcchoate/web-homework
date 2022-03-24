@@ -7,7 +7,7 @@ import Context from "./Context";
 
 import styles from "./App.module.scss";
 
-export function Bank () {
+const App = () => {
   const { linkSuccess, isItemAccess, dispatch } = useContext(Context);
 
   const getInfo = useCallback(async () => {
