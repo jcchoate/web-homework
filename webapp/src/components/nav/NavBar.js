@@ -10,10 +10,10 @@ export default function NavBar ({ pages }) {
   return (
     <Box data-testid={'navBar'} sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
-        <Toolbar variant='dense'>
+        <Toolbar variant='regular'>
           <Box>
             {pages.map((page) => (
-              <Button component={Link} key={page[0]} to={page[0]}>
+              <Button component={Link} key={page[0]} to={page[0]} color="inherit">
                 {page[1]}
               </Button>
             ))}

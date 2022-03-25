@@ -1,9 +1,8 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 
 export const layoutStyle = css`
   display: grid;
   grid-row-gap: 24px;
-  padding: 8px;
 `
 // Styles for the Add Transaction component
 export const headerStyle = css`
@@ -30,6 +29,7 @@ export const addTrxnButtonStyle = css`
 
 export const contentStyle = css`
     grid-row: 2;
+    padding: 2em;
     `
 
 // Styles for the Modal component

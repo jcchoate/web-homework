@@ -2,20 +2,15 @@ const path = require('path')
 const root = process.cwd()
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
 
 const outputDirectory = path.join(root, '..', 'webserver', 'public')
 
-const plugins = [
+let plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: './index.ejs',
     title: 'Divvy Coding Challenge',
     appMountId: 'react-app'
-  }),
-  new ESLintPlugin({
-    files: './src/*',
-    fix: true
   })
 ]
 
@@ -36,6 +31,7 @@ const imageUrlConfig = {
   test: IMAGE_FILE_REGEX,
   use: 'url-loader?limit=25000'
 }
+
 
 const graphQlConfig = {
   test: GRAPH_QL_FILE_REGEX,
